@@ -13,6 +13,7 @@ calculatorDiv.appendChild(displayDiv)
 
 const display = document.createElement("div")
 display.classList.add("display")
+display.textContent = "23984y48"
 displayDiv.appendChild(display)
 
 const buttonsDiv = document.createElement("div")
@@ -21,46 +22,60 @@ calculatorDiv.appendChild(buttonsDiv)
 
 const buttonSeven = document.createElement("div")
 buttonSeven.classList.add("button-seven")
+buttonSeven.textContent = "7"
 buttonsDiv.appendChild(buttonSeven)
+
 
 const buttonEight = document.createElement("div")
 buttonEight.classList.add("button-eight")
+buttonEight.textContent = "8"
 buttonsDiv.appendChild(buttonEight)
 
 const buttonNine = document.createElement("div")
 buttonNine.classList.add("button-nine")
+buttonNine.textContent = "9"
 buttonsDiv.appendChild(buttonNine)
 
 const buttonFour = document.createElement("div")
 buttonFour.classList.add("button-four")
+buttonFour.textContent = "4"
 buttonsDiv.appendChild(buttonFour)
 
 const buttonFive = document.createElement("div")
 buttonFive.classList.add("button-five")
+buttonFive.textContent = "5"
 buttonsDiv.appendChild(buttonFive)
 
 const buttonSix = document.createElement("div")
 buttonSix.classList.add("button-six")
+buttonSix.textContent = "6"
 buttonsDiv.appendChild(buttonSix)
-
-const buttonThree = document.createElement("div")
-buttonThree.classList.add("button-three")
-buttonsDiv.appendChild(buttonThree)
-
-const buttonTwo = document.createElement("div")
-buttonTwo.classList.add("button-two")
-buttonsDiv.appendChild(buttonTwo)
 
 const buttonOne = document.createElement("div")
 buttonOne.classList.add("button-one")
+buttonOne.textContent = "1"
 buttonsDiv.appendChild(buttonOne)
+
+const buttonTwo = document.createElement("div")
+buttonTwo.classList.add("button-two")
+buttonTwo.textContent = "2"
+buttonsDiv.appendChild(buttonTwo)
+
+const buttonThree = document.createElement("div")
+buttonThree.classList.add("button-three")
+buttonThree.textContent = "3"
+buttonsDiv.appendChild(buttonThree)
+
+
 
 const equalButton = document.createElement("div")
 equalButton.classList.add("equal-button")
+equalButton.textContent = "="
 buttonsDiv.appendChild(equalButton)
 
 const clearButton = document.createElement("div")
 clearButton.classList.add("clear-button")
+clearButton.textContent = "CLEAR"
 buttonsDiv.appendChild(clearButton)
 
 function add(num1,num2){
