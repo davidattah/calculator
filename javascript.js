@@ -15,9 +15,53 @@ const display = document.createElement("div")
 display.classList.add("display")
 displayDiv.appendChild(display)
 
+const buttonsDiv = document.createElement("div")
+buttonsDiv.classList.add("buttons-div")
+calculatorDiv.appendChild(buttonsDiv)
 
+const buttonSeven = document.createElement("div")
+buttonSeven.classList.add("button-seven")
+buttonsDiv.appendChild(buttonSeven)
 
+const buttonEight = document.createElement("div")
+buttonEight.classList.add("button-eight")
+buttonsDiv.appendChild(buttonEight)
 
+const buttonNine = document.createElement("div")
+buttonNine.classList.add("button-nine")
+buttonsDiv.appendChild(buttonNine)
+
+const buttonFour = document.createElement("div")
+buttonFour.classList.add("button-four")
+buttonsDiv.appendChild(buttonFour)
+
+const buttonFive = document.createElement("div")
+buttonFive.classList.add("button-five")
+buttonsDiv.appendChild(buttonFive)
+
+const buttonSix = document.createElement("div")
+buttonSix.classList.add("button-six")
+buttonsDiv.appendChild(buttonSix)
+
+const buttonThree = document.createElement("div")
+buttonThree.classList.add("button-three")
+buttonsDiv.appendChild(buttonThree)
+
+const buttonTwo = document.createElement("div")
+buttonTwo.classList.add("button-two")
+buttonsDiv.appendChild(buttonTwo)
+
+const buttonOne = document.createElement("div")
+buttonOne.classList.add("button-one")
+buttonsDiv.appendChild(buttonOne)
+
+const equalButton = document.createElement("div")
+equalButton.classList.add("equal-button")
+buttonsDiv.appendChild(equalButton)
+
+const clearButton = document.createElement("div")
+clearButton.classList.add("clear-button")
+buttonsDiv.appendChild(clearButton)
 
 function add(num1,num2){
     console.log(num1 + num2)
