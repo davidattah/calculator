@@ -180,10 +180,43 @@ numberButtons.forEach((numberButton=>{
 
 operators.forEach((opera=>{
     opera.addEventListener("click",(event)=>{
+        calculate()
         display.textContent = secondNumber
        // display.textContent = ""
        operator = event.target.textContent
       
 }) 
 }))
+
+function calculate(){
+while(secondNumber != ""){
+    operate(firstNumber,operator,secondNumber)
+    firstNumber = total
+    secondNumber = ""
+    total = ""
+   operator = ""
+}
+}
+
+
+const cleButton = document.querySelector(".clear")
+cleButton.addEventListener("click",()=>{
+    display.textContent = ""
+    firstNumber = ""
+    secondNumber = ""
+    operator = ""
+    total = ""
+    
+})
+
+const equButton = document.querySelector(".equal")
+equButton.addEventListener("click",()=>{
+    operate(firstNumber,operator,secondNumber)
+    display.textContent = total
+    firstNumber = total 
+    secondNumber = ""
+    operator = ""
+    total = ""
+})
+
 
