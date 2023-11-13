@@ -13,7 +13,6 @@ calculatorDiv.appendChild(displayDiv)
 
 const display = document.createElement("div")
 display.classList.add("display")
-display.textContent = "23984y48"
 displayDiv.appendChild(display)
 
 const buttonsDiv = document.createElement("div")
@@ -21,63 +20,105 @@ buttonsDiv.classList.add("buttons-div")
 calculatorDiv.appendChild(buttonsDiv)
 
 const buttonSeven = document.createElement("div")
-buttonSeven.classList.add("button-seven")
+buttonSeven.classList.add("number-button")
+buttonSeven.setAttribute("id", "seven")
 buttonSeven.textContent = "7"
 buttonsDiv.appendChild(buttonSeven)
 
 
-const buttonEight = document.createElement("div")
-buttonEight.classList.add("button-eight")
+const buttonEight = document.createElement("button")
+buttonEight.classList.add("number-button")
+buttonEight.setAttribute("id", "eight")
 buttonEight.textContent = "8"
 buttonsDiv.appendChild(buttonEight)
 
-const buttonNine = document.createElement("div")
-buttonNine.classList.add("button-nine")
+const buttonNine = document.createElement("button")
+buttonNine.classList.add("number-button")
+buttonNine.setAttribute("id", "nine")
 buttonNine.textContent = "9"
 buttonsDiv.appendChild(buttonNine)
 
-const buttonFour = document.createElement("div")
-buttonFour.classList.add("button-four")
+const divideButton = document.createElement("button")
+divideButton.classList.add("operator")
+divideButton.setAttribute("id", "divide")
+divideButton.textContent = "/"
+buttonsDiv.appendChild(divideButton)
+
+const buttonFour = document.createElement("button")
+buttonFour.classList.add("number-button")
+buttonFour.setAttribute("id", "four")
 buttonFour.textContent = "4"
 buttonsDiv.appendChild(buttonFour)
 
-const buttonFive = document.createElement("div")
-buttonFive.classList.add("button-five")
+const buttonFive = document.createElement("button")
+buttonFive.classList.add("number-button")
+buttonFive.setAttribute("id", "five")
 buttonFive.textContent = "5"
 buttonsDiv.appendChild(buttonFive)
 
-const buttonSix = document.createElement("div")
-buttonSix.classList.add("button-six")
+const buttonSix = document.createElement("button")
+buttonSix.classList.add("number-button")
+buttonSix.setAttribute("id", "six")
 buttonSix.textContent = "6"
 buttonsDiv.appendChild(buttonSix)
 
-const buttonOne = document.createElement("div")
-buttonOne.classList.add("button-one")
+const subtractButton = document.createElement("button")
+subtractButton.classList.add("operator")
+subtractButton.setAttribute("id", "subtract")
+subtractButton.textContent = "-"
+buttonsDiv.appendChild(subtractButton)
+
+const buttonOne = document.createElement("button")
+buttonOne.classList.add("number-button")
+buttonOne.setAttribute("id", "one")
 buttonOne.textContent = "1"
 buttonsDiv.appendChild(buttonOne)
 
-const buttonTwo = document.createElement("div")
-buttonTwo.classList.add("button-two")
+const buttonTwo = document.createElement("button")
+buttonTwo.classList.add("number-button")
+buttonTwo.setAttribute("id", "two")
 buttonTwo.textContent = "2"
 buttonsDiv.appendChild(buttonTwo)
 
-const buttonThree = document.createElement("div")
-buttonThree.classList.add("button-three")
+const buttonThree = document.createElement("button")
+buttonThree.classList.add("number-button")
+buttonThree.setAttribute("id", "three")
 buttonThree.textContent = "3"
 buttonsDiv.appendChild(buttonThree)
 
+const multiplyButton = document.createElement("button")
+multiplyButton.classList.add("operator")
+multiplyButton.setAttribute("id", "multiply")
+multiplyButton.textContent = "*"
+buttonsDiv.appendChild(multiplyButton)
 
+const buttonZero = document.createElement("button")
+buttonZero.classList.add("number-button")
+buttonZero.setAttribute("id", "zero")
+buttonZero.textContent = "0"
+buttonsDiv.appendChild(buttonZero)
 
-const equalButton = document.createElement("div")
-equalButton.classList.add("equal-button")
+const addButton = document.createElement("button")
+addButton.classList.add("operator")
+addButton.setAttribute("id", "add")
+addButton.textContent = "+"
+buttonsDiv.appendChild(addButton)
+
+const equalButton = document.createElement("button")
+equalButton.classList.add("equal")
+equalButton.setAttribute("id", "equal")
 equalButton.textContent = "="
 buttonsDiv.appendChild(equalButton)
 
-const clearButton = document.createElement("div")
-clearButton.classList.add("clear-button")
+const clearButton = document.createElement("button")
+clearButton.classList.add("clear")
 clearButton.textContent = "CLEAR"
 buttonsDiv.appendChild(clearButton)
 
+let firstNumber = "";
+let sign = ""
+let secondNumber = "";
+let total = null;
 function add(num1,num2){
     console.log(num1 + num2)
 }
@@ -113,4 +154,3 @@ let secondNum = num2;
 }
 
 operate(2,"+",3)
-
