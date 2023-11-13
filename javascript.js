@@ -119,38 +119,44 @@ let firstNumber = "";
 let sign = ""
 let secondNumber = "";
 let total = null;
-function add(num1,num2){
-    console.log(num1 + num2)
-}
 
+function add(num1,num2){
+    total = num1+num2 
+    console.log(total)
+}
 function subtract(num1,num2){
-    console.log(num1 - num2)
+    total = num1 - num2 
+    console.log(total)
+   
 }
 
 function multiply(num1,num2){
-    console.log(num1 * num2)
+    total =  num1 * num2 
+    console.log(total)
 }
 
 function divide(num1,num2){
-    console.log(num1 /num2)
-}
-
-function operate(num1,sign,num2){
-let firstNum = num1;
-let operator = sign;
-let secondNum = num2;
-
-    if(operator == "+"){
-        add(num1,num2)
-    }else if(operator == "-"){
-        subtract(num1,num2)
-    }else if(operator == "*"){
-        multiply(num1,num2)
+    if(num1 / num2 == Infinity){
+        console.log("Be serious")
+        total =  NaN
+        console.log(total)
     }else{
-        divide(num1,num2)
+    total =  num1 / num2
+    console.log(total)
     }
-    console.log(operator)
-    console.log(secondNum)
 }
 
-operate(2,"+",3)
+function operate(num1,operator,num2){
+    if(operator == "+"){
+        return add(num1,num2)
+    }else if(operator == "-"){
+        return subtract(num1,num2)
+    }else if(operator == "*"){
+        return multiply(num1,num2)
+    }else if(operator == "/"){  
+       return divide(num1,num2)
+    }
+}
+
+
+
