@@ -169,7 +169,14 @@ const operators = document.querySelectorAll(".operator")
 const numberButtons = document.querySelectorAll(".number-button")
 numberButtons.forEach((numberButton=>{
     numberButton.addEventListener("click",(event)=>{
-       
+        let number = event.target
+        if(operator == ""){
+            firstNumber += number.textContent
+            display.textContent = firstNumber
+        }else{
+            secondNumber += number.textContent
+            display.textContent = secondNumber
+        }
     })    
 }))
 
