@@ -122,32 +122,25 @@ let total = null;
 
 function add(num1,num2){
     total = +num1 + +num2 
-    console.log(total)
- 
     display.textContent = total
 }
 function subtract(num1,num2){
     total = +num1 - +num2
-    console.log(total)
     display.textContent = total
    
 }
 
 function multiply(num1,num2){
     total =  +num1 * +num2 
-    console.log(total)
     display.textContent = total
 }
 
 function divide(num1,num2){
     if(+num1 / +num2 == Infinity){
-        console.log("Be serious")
         total =  NaN
-        console.log(total)
         display.textContent = "Be serious"
     }else{
     total =  Math.round((+num1 / +num2)*1000)/1000
-    console.log(total)
     display.textContent = total
     }
 }
