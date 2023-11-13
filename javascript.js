@@ -121,29 +121,34 @@ let secondNumber = "";
 let total = null;
 
 function add(num1,num2){
-    total = num1+num2 
+    total = +num1 + +num2 
     console.log(total)
+ 
     display.textContent = total
 }
 function subtract(num1,num2){
-    total = num1 - num2 
+    total = +num1 - +num2
     console.log(total)
+    display.textContent = total
    
 }
 
 function multiply(num1,num2){
-    total =  num1 * num2 
+    total =  +num1 * +num2 
     console.log(total)
+    display.textContent = total
 }
 
 function divide(num1,num2){
-    if(num1 / num2 == Infinity){
+    if(+num1 / +num2 == Infinity){
         console.log("Be serious")
         total =  NaN
         console.log(total)
+        display.textContent = "Be serious"
     }else{
-    total =  num1 / num2
+    total =  Math.round((+num1 / +num2)*1000)/1000
     console.log(total)
+    display.textContent = total
     }
 }
 
@@ -164,27 +169,15 @@ const operators = document.querySelectorAll(".operator")
 const numberButtons = document.querySelectorAll(".number-button")
 numberButtons.forEach((numberButton=>{
     numberButton.addEventListener("click",(event)=>{
-        let number = event.target
-        if(operator == ""){
-            display.textContent += number.textContent
-            firstNumber = +display.textContent
-            console.log(firstNumber)
-        }else{
-            display.textContent += number.textContent
-            secondNumber = +display.textContent
-          console.log(secondNumber)
-        }
        
     })    
 }))
 
 operators.forEach((opera=>{
     opera.addEventListener("click",(event)=>{
-        calculate()
-        display.textContent = secondNumber
-       // display.textContent = ""
-       operator = event.target.textContent
-      
+        calculate() 
+        operator = event.target.textContent
+            
 }) 
 }))
 
@@ -193,8 +186,6 @@ while(secondNumber != ""){
     operate(firstNumber,operator,secondNumber)
     firstNumber = total
     secondNumber = ""
-    total = ""
-   operator = ""
 }
 }
 
