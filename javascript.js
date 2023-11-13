@@ -123,6 +123,7 @@ let total = null;
 function add(num1,num2){
     total = num1+num2 
     console.log(total)
+    display.textContent = total
 }
 function subtract(num1,num2){
     total = num1 - num2 
@@ -157,6 +158,26 @@ function operate(num1,operator,num2){
        return divide(num1,num2)
     }
 }
+
+let operator = ""
+const operators = document.querySelectorAll(".operator")
+const numberButtons = document.querySelectorAll(".number-button")
+numberButtons.forEach((numberButton=>{
+    numberButton.addEventListener("click",(event)=>{
+        let number = event.target
+       
+        if(operator == ""){
+            display.textContent += number.textContent
+            firstNumber = +display.textContent
+            console.log(firstNumber)
+        }else{
+            display.textContent += number.textContent
+            secondNumber = +display.textContent
+          console.log(secondNumber)
+        }
+       
+    })    
+}))
 
 
 
