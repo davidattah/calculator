@@ -165,7 +165,6 @@ const numberButtons = document.querySelectorAll(".number-button")
 numberButtons.forEach((numberButton=>{
     numberButton.addEventListener("click",(event)=>{
         let number = event.target
-       
         if(operator == ""){
             display.textContent += number.textContent
             firstNumber = +display.textContent
@@ -179,5 +178,12 @@ numberButtons.forEach((numberButton=>{
     })    
 }))
 
-
+operators.forEach((opera=>{
+    opera.addEventListener("click",(event)=>{
+        display.textContent = secondNumber
+       // display.textContent = ""
+       operator = event.target.textContent
+      
+}) 
+}))
 
